@@ -1,0 +1,6 @@
+*.exe
+*.zip
+*.log
+bin/
+obj/
+.vs/
