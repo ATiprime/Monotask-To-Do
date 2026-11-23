@@ -1,0 +1,31 @@
+:root {
+  --bg-deep: #0d110e;
+  --bg: #121713;
+  --glow: rgba(116, 192, 142, 0.1);
+  --surface: #1a201b;
+  --surface-2: #222a24;
+  --surface-3: #29332c;
+  --border: #29322b;
+  --text: #f0f3ec;
+  --muted: #8c968e;
+  --dim: #646e66;
+  --accent: #74c08e;
+  --accent-soft: #1b2a20;
+  --accent-border: rgba(116, 192, 142, 0.45);
+  --accent-ink: #0c150f;
+  --check-border: #4c5a4f;
+  --danger: #e07a7a;
+}
+
+.weed-list .todo-row {
+  min-height: 62px;
+}
+
+.weed-list .check-btn {
+  margin-left: 8px;
+}
+
+.weed-list .empty-state {
+  min-height: 100%;
+  padding-bottom: 20px;
+}

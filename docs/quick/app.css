@@ -1,0 +1,29 @@
+:root {
+  --bg-deep: #101114;
+  --bg: #15161a;
+  --glow: rgba(231, 168, 92, 0.11);
+  --surface: #1c1e24;
+  --surface-2: #24272e;
+  --surface-3: #2b2e36;
+  --border: #2c2f37;
+  --text: #f3f1eb;
+  --muted: #8b8e97;
+  --dim: #656973;
+  --accent: #e7a85c;
+  --accent-soft: #2c2216;
+  --accent-border: rgba(231, 168, 92, 0.5);
+  --accent-ink: #171207;
+  --check-border: #4f535e;
+  --danger: #e06c6c;
+}
+
+.quick-list .todo-row {
+  min-height: 64px;
+}
+
+.quick-list.dragging-active .todo-row:not(.dragging) {
+  transition:
+    transform 0.14s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease;
+}
