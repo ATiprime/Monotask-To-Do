@@ -1,4 +1,4 @@
-const CACHE = "monotask-quick-v1";
+const CACHE = "monotask-quick-v2";
 const ASSETS = [
   "./",
   "./index.html",

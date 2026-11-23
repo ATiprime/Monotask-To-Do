@@ -1,5 +1,5 @@
 import { createListStore } from "../shared/store.js";
-import { setupInstall, haptic } from "../shared/ui.js";
+import { setupInstall, haptic, isNativeShell } from "../shared/ui.js";
 
 const store = createListStore({
   key: "monotask.weeder.v1",
@@ -167,7 +167,7 @@ listEl.addEventListener("click", (event) => {
   }
 });
 
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator && !isNativeShell()) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").catch(() => {});
   });

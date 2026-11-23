@@ -10,6 +10,10 @@ function standaloneMode() {
   );
 }
 
+export function isNativeShell() {
+  return new URLSearchParams(window.location.search).has("native");
+}
+
 function buildInstallSheet() {
   const overlay = document.createElement("div");
   overlay.className = "install-overlay";
@@ -70,7 +74,7 @@ function showInstallHelp() {
 export function setupInstall(button) {
   if (!button) return;
 
-  if (standaloneMode()) {
+  if (standaloneMode() || isNativeShell()) {
     button.hidden = true;
     return;
   }

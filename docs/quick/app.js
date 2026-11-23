@@ -1,5 +1,5 @@
 import { createListStore } from "../shared/store.js";
-import { setupInstall, haptic } from "../shared/ui.js";
+import { setupInstall, haptic, isNativeShell } from "../shared/ui.js";
 
 const MAX_ITEMS = 5;
 const store = createListStore({
@@ -210,7 +210,7 @@ listEl.addEventListener("contextmenu", (event) => {
   if (draggingRow || event.target.closest(".grip")) event.preventDefault();
 });
 
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator && !isNativeShell()) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").catch(() => {});
   });

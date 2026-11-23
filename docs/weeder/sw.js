@@ -1,4 +1,4 @@
-const CACHE = "monotask-weeder-v1";
+const CACHE = "monotask-weeder-v2";
 const ASSETS = [
   "./",
   "./index.html",
